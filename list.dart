@@ -28,7 +28,7 @@ Map students1 ={
   "name" : "hadi",
   "age" : 20,
    "gender" :  "male",
-   "city" : "karachi",
+  
 };
 // print(students1);
 // print(students1.isEmpty);
@@ -57,5 +57,27 @@ students1.addAll({
   "grade" : "A+",
 });
  print(students1);
+ students1["rollNo"] = "RN002"; // update value of key
+//  students1["enrollmentno."] = "EN021";   // update if key exist and add if not exist
+  students1.putIfAbsent("enrollmentno.", () => "EN021"); // add new key and value if not exist
+ print(students1);
+// Cascade Operators used to perform multiple operations on the same object
+Map studentDetail = {
+  "class" : "X",
+  "schoolname" : "APS",
+  "address" : "karachi",
+  "contact" : "123456789",
+};
+Map Student ={}
+  ..addAll(students1)
+  ..addAll(studentDetail);
+
+  print(Student);
+
+
+// spread operator used to merge multiple objects in a list or map
+Map StudentDetails = {...students1, ...studentDetail};
+print(StudentDetails);
+
 
 }
