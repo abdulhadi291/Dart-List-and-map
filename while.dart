@@ -1,10 +1,11 @@
 import 'dart:io';
 
 void main(){
+  bool isLoginSuccessful = false;
   String username = "admin";  
   String password = "123456789";
  
-  while (true) {
+  while (isLoginSuccessful) {
     print("Enter your username: ");
     String inputUsername = stdin.readLineSync()!; 
     print("Enter your password: ");
@@ -12,8 +13,9 @@ void main(){
 
     
     if (inputUsername == username && inputPassword == password) {
+      isLoginSuccessful = true; 
       print("Login successful!");
-      break;
+
     } else {
       print("Invalid username or password. Please try again.");
     }
