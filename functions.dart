@@ -19,18 +19,21 @@ print("=========");
   // printMyDetails();
   // print("This is  function 2");
   // addTwoNumbers();
+ calculateTotalMarls(int num1, int num2, int num3, int num4) {
+    // Function to calculate total marks
+    // int num1 = 90;
+    // int num2 = 85;
+    // int num3 = 78;
+    // int num4 = 88;
 
-  int calculateTotalMarls(){
-int num1 =32;
-int num2 = 45;
-int num3 = 78;
-int num4 = 90;
+    // Calculate total marks
+
 int totalMarks = num1 + num2 + num3 + num4;
 
     return totalMarks;
   }
 
-int totalMarks = calculateTotalMarls();
+int totalMarks = calculateTotalMarls(43,23,53,253);
 print(totalMarks);
 
 }
