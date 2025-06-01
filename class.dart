@@ -20,16 +20,21 @@
 // }
 
 class Device {
-  String? dname;
-  String? dbrand;
+  String? name;
+  String? brand;
   bool? isAndriod;
   bool? isIOS;
 
+// Default constructor
+
   Device(name, brand) {
-    dname = name;
-    dbrand = brand;
+
+    // Use of this keyword
+    this.name = name;
+    this.brand = brand;
   }
 
+// Named constructors
   Device.isAndriod() {
      isAndriod = true;
   }
@@ -39,7 +44,7 @@ class Device {
   }
 
   action() {
-    print("Hello, my device is $dname and brand is $dbrand.");
+    print("Hello, my device is $name and brand is $brand.");
     print("Is it Apple? ${isIOS}");
   }
 }
